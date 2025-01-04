@@ -29,7 +29,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <ul>
         <?php foreach ($events as $event): ?>
             <li>
-                <strong><?= htmlspecialchars($event['title']); ?></strong> (<?= $event['date']; ?>)
+                <strong><?= htmlspecialchars($event['title']); ?></strong> <strong><?= $event['description']; ?></strong> <strong><?= $event['date']; ?></strong>
                 <a href="edit_event.php?id=<?= $event['id']; ?>">Edit</a>
                 <a href="delete_event.php?id=<?= $event['id']; ?>">Delete</a>
             </li>
